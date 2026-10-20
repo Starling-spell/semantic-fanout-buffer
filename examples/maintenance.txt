@@ -1,0 +1,4 @@
+FICTIONAL DOCUMENT FOR A PUBLIC PROTOCOL DEMONSTRATION
+The service will undergo planned maintenance on 2 November 2026, from 02:00 to 03:00 UTC. The service will be unavailable throughout this window.
+There is no price increase. All subscription prices remain unchanged.
+This authored notice is test data. It does not describe an actual service or actual delivery.

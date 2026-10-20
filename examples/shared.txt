@@ -1,0 +1,4 @@
+FICTIONAL DOCUMENT FOR A PUBLIC PROTOCOL DEMONSTRATION
+The service will undergo planned maintenance on 1 November 2026, from 02:00 to 03:00 UTC. The service will be unavailable throughout this window.
+The monthly subscription price will increase from USD 10 to USD 12 on 1 December 2026.
+This authored notice is test data. It does not describe an actual service or actual delivery.
