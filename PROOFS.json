@@ -1,0 +1,1718 @@
+{
+  "network": "studionet",
+  "chain_id": 61999,
+  "fixture_commit": "94c28c47c03e48ff14526adc0ff368039e0a7d21",
+  "accounts": [
+    {
+      "name": "studio-proof-deployer",
+      "address": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+    },
+    {
+      "name": "fairresolve-demo",
+      "address": "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35"
+    },
+    {
+      "name": "reality-random2",
+      "address": "0x5585Ea8f2FCC126bad0830EB9701E19b3CD800D5"
+    }
+  ],
+  "transactions": [
+    {
+      "step": "deploy",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "verified": true,
+      "cli_arguments": [
+        "deploy",
+        "--contract",
+        "contracts/SemanticFanoutBuffer.py"
+      ],
+      "hash": "0x094464f49214bc55c6786f07805ab6982ec42c282a681508f31a8cb08df26216",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "open-main",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "verified": true,
+      "cli_arguments": [
+        "write",
+        "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+        "open_channel",
+        "--args",
+        "main-v1",
+        "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42,0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35",
+        "2",
+        "1",
+        "1800"
+      ],
+      "hash": "0x9be8dfd868824bc4c2cb0194d1f49dba1e1bd3bf308ff15edbd5ebfaf9bc776c",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "subscribe-main-A",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "verified": true,
+      "cli_arguments": [
+        "write",
+        "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+        "subscribe",
+        "--args",
+        "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+        "The authored notice includes a definite planned-maintenance service-unavailability statement, even if fictional."
+      ],
+      "hash": "0x9db8a44c3f4908915b01d083d78651367f870ed8e9c26309ef4d28579a237be5",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "subscribe-main-B",
+      "signer": "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35",
+      "expected": "SUCCESS",
+      "verified": true,
+      "cli_arguments": [
+        "write",
+        "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+        "subscribe",
+        "--args",
+        "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+        "The authored notice includes a definite increase of a subscription price, even if fictional."
+      ],
+      "hash": "0x1584ae80ea3f40a33b79c955359fc88582ccc4d0c04acf09f7120174c6ab4516",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "activate-main",
+      "signer": "0x5585Ea8f2FCC126bad0830EB9701E19b3CD800D5",
+      "expected": "SUCCESS",
+      "verified": true,
+      "cli_arguments": [
+        "write",
+        "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+        "activate",
+        "--args",
+        "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1"
+      ],
+      "hash": "0x579247da15d7e277c4e1448ed9c57552d45e95522d4364503759554ec9bfab2d",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "open-expiry",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "verified": true,
+      "cli_arguments": [
+        "write",
+        "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+        "open_channel",
+        "--args",
+        "expiry-v1",
+        "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42,0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35",
+        "2",
+        "1",
+        "60"
+      ],
+      "hash": "0x9821be1f562d5678aca32827856302f4ac5d75842dbb1a69dccc068957d3deae",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "subscribe-expiry-A",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "verified": true,
+      "cli_arguments": [
+        "write",
+        "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+        "subscribe",
+        "--args",
+        "b673fb86576bd13fe4130de8d28b253576e92cd890bb04dcfe806d45bd7e896a",
+        "The authored notice includes a definite planned-maintenance service-unavailability statement, even if fictional."
+      ],
+      "hash": "0xe364c49b2eb690f86a373f770830226831f92c129fdb74a23939e0810f3ae3b1",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "subscribe-expiry-B",
+      "signer": "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35",
+      "expected": "SUCCESS",
+      "verified": true,
+      "cli_arguments": [
+        "write",
+        "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+        "subscribe",
+        "--args",
+        "b673fb86576bd13fe4130de8d28b253576e92cd890bb04dcfe806d45bd7e896a",
+        "The authored notice includes a definite increase of a subscription price, even if fictional."
+      ],
+      "hash": "0x40bb6faad01218005231117aad35e87ccf7fbdfeaac5525a6bb9d5e1c5c5bb61",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "activate-expiry",
+      "signer": "0x5585Ea8f2FCC126bad0830EB9701E19b3CD800D5",
+      "expected": "SUCCESS",
+      "verified": true,
+      "cli_arguments": [
+        "write",
+        "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+        "activate",
+        "--args",
+        "b673fb86576bd13fe4130de8d28b253576e92cd890bb04dcfe806d45bd7e896a"
+      ],
+      "hash": "0x95b21b4d36f3bc8d191851adeb5222f95a40edd0871df3a9d3068868404eef57",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "shared-first",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "verified": true,
+      "cli_arguments": [
+        "write",
+        "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+        "publish",
+        "--args",
+        "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+        "shared-first",
+        "Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt",
+        "e5e39a38eadedc835ee508a626309acae625f59c35b78620f78fe14a29d823c2"
+      ],
+      "hash": "0x1bea75df40fa87a32bbbb877d535379b1d372defd66a614013a36fafdfb4bef3",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "ack-shared-A",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "verified": true,
+      "cli_arguments": [
+        "write",
+        "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+        "ack",
+        "--args",
+        "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+        "24b8482a7aea4b1318a9631e4d4c305cb7467513c8ff2b126ace065be531b486",
+        "1",
+        "2356f1c2fc3a6258f68a6ac9a2c39999ae2a0872682bff16cc6b97a65b6ba748"
+      ],
+      "hash": "0xb41298d676cb60da0d4fd55a7d494105a081d59afd628614fb5bfb83f3949d59",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "credit-blocked",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "verified": true,
+      "cli_arguments": [
+        "write",
+        "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+        "publish",
+        "--args",
+        "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+        "credit-blocked",
+        "Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt",
+        "e5e39a38eadedc835ee508a626309acae625f59c35b78620f78fe14a29d823c2"
+      ],
+      "hash": "0x5ee6d1e486374805ee3bb8a3ed0cff585a4e872178565390dd247a14725cdcbf",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "ready-only",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "verified": true,
+      "cli_arguments": [
+        "write",
+        "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+        "publish",
+        "--args",
+        "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+        "ready-only",
+        "Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/maintenance.txt",
+        "a0f7c6430b4e6150767e6c3f4be878a9842af7754ef0b444943f4dd57edf77d3"
+      ],
+      "hash": "0xab42d59b25d366b5e7a78107d054a06f25f4f96e7ecea01947c1eccb02d11125",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "ack-ready-A",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "verified": true,
+      "cli_arguments": [
+        "write",
+        "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+        "ack",
+        "--args",
+        "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+        "5fda35e62ea4ee8235d2b9046a3f693dd32cea2a0a1de77bc151539c032a4464",
+        "1",
+        "0ac35749a0640dd93fa45f9617948a56b742ac7d4816e6e33d96e52d4cd97385"
+      ],
+      "hash": "0x48cf9ac2099d4a7527c8ffadcd011a6e1b98747d85b83673576b17d09816a39e",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "ack-shared-B",
+      "signer": "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35",
+      "expected": "SUCCESS",
+      "verified": true,
+      "cli_arguments": [
+        "write",
+        "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+        "ack",
+        "--args",
+        "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+        "24b8482a7aea4b1318a9631e4d4c305cb7467513c8ff2b126ace065be531b486",
+        "1",
+        "2356f1c2fc3a6258f68a6ac9a2c39999ae2a0872682bff16cc6b97a65b6ba748"
+      ],
+      "hash": "0x4cd87824297e62b2b8d9bc791208cc1880b3d24b71f44153213ebe3a1b03f67b",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "slot-reuse",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "verified": true,
+      "cli_arguments": [
+        "write",
+        "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+        "publish",
+        "--args",
+        "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+        "slot-reuse",
+        "Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt",
+        "e5e39a38eadedc835ee508a626309acae625f59c35b78620f78fe14a29d823c2"
+      ],
+      "hash": "0xf4b5c44aff7b06a78d6c502b63f2af0b294377f070d8a90703bf31e87cc6c20d",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "outsider-ack",
+      "signer": "0x5585Ea8f2FCC126bad0830EB9701E19b3CD800D5",
+      "expected": "ERROR",
+      "verified": true,
+      "cli_arguments": [
+        "write",
+        "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+        "ack",
+        "--args",
+        "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+        "f8ee18da67b7c72a0706fca7559eab3f17592801c16c7d4459304a80d5f5f825",
+        "2",
+        "9369f833e19119755c3b251eba5aa87a4f4226b83fc68235730bc4c5955dfacc"
+      ],
+      "expected_message": "Not a pending subscriber",
+      "hash": "0xe3f590fe60308da0bf39a480fcd4ba1524b1d06e874f558072dc3d649cbb6e09",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "consensus": "MAJORITY_AGREE",
+      "expected_error_matched": true,
+      "committed": false
+    },
+    {
+      "step": "cross-channel-ack",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "ERROR",
+      "verified": true,
+      "cli_arguments": [
+        "write",
+        "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+        "ack",
+        "--args",
+        "b673fb86576bd13fe4130de8d28b253576e92cd890bb04dcfe806d45bd7e896a",
+        "f8ee18da67b7c72a0706fca7559eab3f17592801c16c7d4459304a80d5f5f825",
+        "2",
+        "9369f833e19119755c3b251eba5aa87a4f4226b83fc68235730bc4c5955dfacc"
+      ],
+      "expected_message": "Delivery channel mismatch",
+      "hash": "0x5fec7ef1b35b39dd7d347a018d7e5161c7f51a123f720ea4f0da1d2cfcb41205",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "consensus": "MAJORITY_AGREE",
+      "expected_error_matched": true,
+      "committed": false
+    },
+    {
+      "step": "wrong-root-ack",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "ERROR",
+      "verified": true,
+      "cli_arguments": [
+        "write",
+        "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+        "ack",
+        "--args",
+        "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+        "f8ee18da67b7c72a0706fca7559eab3f17592801c16c7d4459304a80d5f5f825",
+        "2",
+        "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+      ],
+      "expected_message": "Packet root mismatch",
+      "hash": "0xbc81de2e3311d483173743b305d2f3be6e714339dca5e9bf72ba5d111cc59518",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "consensus": "MAJORITY_AGREE",
+      "expected_error_matched": true,
+      "committed": false
+    },
+    {
+      "step": "stale-slot-ack",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "ERROR",
+      "verified": true,
+      "cli_arguments": [
+        "write",
+        "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+        "ack",
+        "--args",
+        "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+        "24b8482a7aea4b1318a9631e4d4c305cb7467513c8ff2b126ace065be531b486",
+        "1",
+        "2356f1c2fc3a6258f68a6ac9a2c39999ae2a0872682bff16cc6b97a65b6ba748"
+      ],
+      "expected_message": "Slot fence mismatch",
+      "hash": "0x095d6e7de0b1970fe35c3a5724cf907ae580bbe66068bfd70f5b28752deba423",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "consensus": "MAJORITY_AGREE",
+      "expected_error_matched": true,
+      "committed": false
+    },
+    {
+      "step": "publisher-replay",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "ERROR",
+      "verified": true,
+      "cli_arguments": [
+        "write",
+        "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+        "publish",
+        "--args",
+        "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+        "slot-reuse",
+        "Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt",
+        "e5e39a38eadedc835ee508a626309acae625f59c35b78620f78fe14a29d823c2"
+      ],
+      "expected_message": "Packet nonce used",
+      "hash": "0x49f8f62081601126ed302f827053c53cf38defb86d65ffea2fc7de2614d49395",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "consensus": "MAJORITY_AGREE",
+      "expected_error_matched": true,
+      "committed": false
+    },
+    {
+      "step": "bad-source",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "verified": true,
+      "cli_arguments": [
+        "write",
+        "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+        "publish",
+        "--args",
+        "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+        "bad-source",
+        "Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt",
+        "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+      ],
+      "hash": "0xd5b4720b3cac73e476c0f1a0455f68793fb556ab431c9add98b7dc4b1f5acf93",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "expire-me",
+      "signer": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "expected": "SUCCESS",
+      "verified": true,
+      "cli_arguments": [
+        "write",
+        "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+        "publish",
+        "--args",
+        "b673fb86576bd13fe4130de8d28b253576e92cd890bb04dcfe806d45bd7e896a",
+        "expire-me",
+        "Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/maintenance.txt",
+        "a0f7c6430b4e6150767e6c3f4be878a9842af7754ef0b444943f4dd57edf77d3"
+      ],
+      "hash": "0x26ccdd1e05750f25c1e6d9695e7ae1a298c133d2e0cdb2bf20e0838c5697a5aa",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "public-expiry-sweep",
+      "signer": "0x5585Ea8f2FCC126bad0830EB9701E19b3CD800D5",
+      "expected": "SUCCESS",
+      "verified": true,
+      "cli_arguments": [
+        "write",
+        "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+        "sweep",
+        "--args",
+        "b673fb86576bd13fe4130de8d28b253576e92cd890bb04dcfe806d45bd7e896a"
+      ],
+      "hash": "0x749a9f4eea70004995d9939c1044d4d2fb5196209d51def5096ca7531f90705f",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    },
+    {
+      "step": "idempotent-expiry-sweep",
+      "signer": "0x5585Ea8f2FCC126bad0830EB9701E19b3CD800D5",
+      "expected": "SUCCESS",
+      "verified": true,
+      "cli_arguments": [
+        "write",
+        "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+        "sweep",
+        "--args",
+        "b673fb86576bd13fe4130de8d28b253576e92cd890bb04dcfe806d45bd7e896a"
+      ],
+      "hash": "0x67e2a685e0793ff1d30bc32d8acaa1d8f11fe9d939d80d2c3bf283ec5ef809be",
+      "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "consensus": "MAJORITY_AGREE",
+      "committed": true
+    }
+  ],
+  "channels": {
+    "main": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+    "expiry": "b673fb86576bd13fe4130de8d28b253576e92cd890bb04dcfe806d45bd7e896a"
+  },
+  "packets": {
+    "shared-first": {
+      "id": "24b8482a7aea4b1318a9631e4d4c305cb7467513c8ff2b126ace065be531b486",
+      "packet": {
+        "blocked": [],
+        "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+        "created_at": 1792503395,
+        "credit_state": {
+          "generations": [
+            0,
+            0
+          ],
+          "outstanding": {
+            "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35": 0,
+            "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": 0
+          },
+          "slots": [
+            "",
+            ""
+          ]
+        },
+        "generation": 1,
+        "matched": [
+          "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+          "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35"
+        ],
+        "nonce": "shared-first",
+        "report": {
+          "binding": {
+            "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+            "config_root": "47d74d8082af0078eee094579b882c489933f3157fb5ef80e4c88e17a507a023",
+            "credit_state_root": "328a22b7beb8fff2234528b67b8dbe16e86d053ba050525f7f65a491e97deb96",
+            "packet": "24b8482a7aea4b1318a9631e4d4c305cb7467513c8ff2b126ace065be531b486",
+            "policy": "semantic-fanout-buffer-v1",
+            "publisher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+            "source": {
+              "sha256": "e5e39a38eadedc835ee508a626309acae625f59c35b78620f78fe14a29d823c2",
+              "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt"
+            }
+          },
+          "labels": [
+            "YES",
+            "YES"
+          ],
+          "source": {
+            "body": "FICTIONAL DOCUMENT FOR A PUBLIC PROTOCOL DEMONSTRATION\nThe service will undergo planned maintenance on 1 November 2026, from 02:00 to 03:00 UTC. The service will be unavailable throughout this window.\nThe monthly subscription price will increase from USD 10 to USD 12 on 1 December 2026.\nThis authored notice is test data. It does not describe an actual service or actual delivery.\n",
+            "hash": "e5e39a38eadedc835ee508a626309acae625f59c35b78620f78fe14a29d823c2",
+            "http": 200,
+            "status": "OK",
+            "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt"
+          }
+        },
+        "root": "2356f1c2fc3a6258f68a6ac9a2c39999ae2a0872682bff16cc6b97a65b6ba748",
+        "slot": 0,
+        "status": "PUBLISHED"
+      }
+    },
+    "credit-blocked": {
+      "id": "a8e00e6042fca31c0a5991d2ad72f0119e3aaa528d56175c6abeb67e2b49d40f",
+      "packet": {
+        "blocked": [
+          "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35"
+        ],
+        "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+        "created_at": 1792503505,
+        "credit_state": {
+          "generations": [
+            1,
+            0
+          ],
+          "outstanding": {
+            "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35": 1,
+            "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": 0
+          },
+          "slots": [
+            "24b8482a7aea4b1318a9631e4d4c305cb7467513c8ff2b126ace065be531b486",
+            ""
+          ]
+        },
+        "generation": 0,
+        "matched": [
+          "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+          "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35"
+        ],
+        "nonce": "credit-blocked",
+        "report": {
+          "binding": {
+            "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+            "config_root": "47d74d8082af0078eee094579b882c489933f3157fb5ef80e4c88e17a507a023",
+            "credit_state_root": "48a6d94e302ffb0b17aa88bd5c1b6ce21378249fa251d20a91b98376776e28df",
+            "packet": "a8e00e6042fca31c0a5991d2ad72f0119e3aaa528d56175c6abeb67e2b49d40f",
+            "policy": "semantic-fanout-buffer-v1",
+            "publisher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+            "source": {
+              "sha256": "e5e39a38eadedc835ee508a626309acae625f59c35b78620f78fe14a29d823c2",
+              "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt"
+            }
+          },
+          "labels": [
+            "YES",
+            "YES"
+          ],
+          "source": {
+            "body": "FICTIONAL DOCUMENT FOR A PUBLIC PROTOCOL DEMONSTRATION\nThe service will undergo planned maintenance on 1 November 2026, from 02:00 to 03:00 UTC. The service will be unavailable throughout this window.\nThe monthly subscription price will increase from USD 10 to USD 12 on 1 December 2026.\nThis authored notice is test data. It does not describe an actual service or actual delivery.\n",
+            "hash": "e5e39a38eadedc835ee508a626309acae625f59c35b78620f78fe14a29d823c2",
+            "http": 200,
+            "status": "OK",
+            "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt"
+          }
+        },
+        "root": "3f86dbf18c42c23fe4eca5191ec2efa81ba029325121711781b741a57b7b514c",
+        "slot": -1,
+        "status": "BACKPRESSURED"
+      }
+    },
+    "ready-only": {
+      "id": "5fda35e62ea4ee8235d2b9046a3f693dd32cea2a0a1de77bc151539c032a4464",
+      "packet": {
+        "blocked": [],
+        "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+        "created_at": 1792503552,
+        "credit_state": {
+          "generations": [
+            1,
+            0
+          ],
+          "outstanding": {
+            "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35": 1,
+            "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": 0
+          },
+          "slots": [
+            "24b8482a7aea4b1318a9631e4d4c305cb7467513c8ff2b126ace065be531b486",
+            ""
+          ]
+        },
+        "generation": 1,
+        "matched": [
+          "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+        ],
+        "nonce": "ready-only",
+        "report": {
+          "binding": {
+            "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+            "config_root": "47d74d8082af0078eee094579b882c489933f3157fb5ef80e4c88e17a507a023",
+            "credit_state_root": "48a6d94e302ffb0b17aa88bd5c1b6ce21378249fa251d20a91b98376776e28df",
+            "packet": "5fda35e62ea4ee8235d2b9046a3f693dd32cea2a0a1de77bc151539c032a4464",
+            "policy": "semantic-fanout-buffer-v1",
+            "publisher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+            "source": {
+              "sha256": "a0f7c6430b4e6150767e6c3f4be878a9842af7754ef0b444943f4dd57edf77d3",
+              "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/maintenance.txt"
+            }
+          },
+          "labels": [
+            "YES",
+            "NO"
+          ],
+          "source": {
+            "body": "FICTIONAL DOCUMENT FOR A PUBLIC PROTOCOL DEMONSTRATION\nThe service will undergo planned maintenance on 2 November 2026, from 02:00 to 03:00 UTC. The service will be unavailable throughout this window.\nThere is no price increase. All subscription prices remain unchanged.\nThis authored notice is test data. It does not describe an actual service or actual delivery.\n",
+            "hash": "a0f7c6430b4e6150767e6c3f4be878a9842af7754ef0b444943f4dd57edf77d3",
+            "http": 200,
+            "status": "OK",
+            "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/maintenance.txt"
+          }
+        },
+        "root": "0ac35749a0640dd93fa45f9617948a56b742ac7d4816e6e33d96e52d4cd97385",
+        "slot": 1,
+        "status": "PUBLISHED"
+      }
+    },
+    "slot-reuse": {
+      "id": "f8ee18da67b7c72a0706fca7559eab3f17592801c16c7d4459304a80d5f5f825",
+      "packet": {
+        "blocked": [],
+        "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+        "created_at": 1792503702,
+        "credit_state": {
+          "generations": [
+            1,
+            1
+          ],
+          "outstanding": {
+            "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35": 0,
+            "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": 0
+          },
+          "slots": [
+            "",
+            ""
+          ]
+        },
+        "generation": 2,
+        "matched": [
+          "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+          "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35"
+        ],
+        "nonce": "slot-reuse",
+        "report": {
+          "binding": {
+            "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+            "config_root": "47d74d8082af0078eee094579b882c489933f3157fb5ef80e4c88e17a507a023",
+            "credit_state_root": "77afb9bfb4161f10093b4865058b9254912635fb245cd764f9593810d0aae3af",
+            "packet": "f8ee18da67b7c72a0706fca7559eab3f17592801c16c7d4459304a80d5f5f825",
+            "policy": "semantic-fanout-buffer-v1",
+            "publisher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+            "source": {
+              "sha256": "e5e39a38eadedc835ee508a626309acae625f59c35b78620f78fe14a29d823c2",
+              "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt"
+            }
+          },
+          "labels": [
+            "YES",
+            "YES"
+          ],
+          "source": {
+            "body": "FICTIONAL DOCUMENT FOR A PUBLIC PROTOCOL DEMONSTRATION\nThe service will undergo planned maintenance on 1 November 2026, from 02:00 to 03:00 UTC. The service will be unavailable throughout this window.\nThe monthly subscription price will increase from USD 10 to USD 12 on 1 December 2026.\nThis authored notice is test data. It does not describe an actual service or actual delivery.\n",
+            "hash": "e5e39a38eadedc835ee508a626309acae625f59c35b78620f78fe14a29d823c2",
+            "http": 200,
+            "status": "OK",
+            "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt"
+          }
+        },
+        "root": "9369f833e19119755c3b251eba5aa87a4f4226b83fc68235730bc4c5955dfacc",
+        "slot": 0,
+        "status": "PUBLISHED"
+      }
+    },
+    "bad-source": {
+      "id": "fa3ec6234bd5ba910cdb15e9b85bdd35995d752d6264a633411ab4c17e2e2918",
+      "packet": {
+        "blocked": [],
+        "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+        "created_at": 1792503977,
+        "credit_state": {
+          "generations": [
+            2,
+            1
+          ],
+          "outstanding": {
+            "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35": 1,
+            "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": 1
+          },
+          "slots": [
+            "f8ee18da67b7c72a0706fca7559eab3f17592801c16c7d4459304a80d5f5f825",
+            ""
+          ]
+        },
+        "generation": 0,
+        "matched": [],
+        "nonce": "bad-source",
+        "report": {
+          "binding": {
+            "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+            "config_root": "47d74d8082af0078eee094579b882c489933f3157fb5ef80e4c88e17a507a023",
+            "credit_state_root": "fab6bac718da00b81f30851019db9f95ea6322e536bab6a1fffead74091a13ae",
+            "packet": "fa3ec6234bd5ba910cdb15e9b85bdd35995d752d6264a633411ab4c17e2e2918",
+            "policy": "semantic-fanout-buffer-v1",
+            "publisher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+            "source": {
+              "sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+              "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt"
+            }
+          },
+          "labels": [],
+          "source": {
+            "body": "FICTIONAL DOCUMENT FOR A PUBLIC PROTOCOL DEMONSTRATION\nThe service will undergo planned maintenance on 1 November 2026, from 02:00 to 03:00 UTC. The service will be unavailable throughout this window.\nThe monthly subscription price will increase from USD 10 to USD 12 on 1 December 2026.\nThis authored notice is test data. It does not describe an actual service or actual delivery.\n",
+            "hash": "e5e39a38eadedc835ee508a626309acae625f59c35b78620f78fe14a29d823c2",
+            "http": 200,
+            "status": "HASH_MISMATCH",
+            "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt"
+          }
+        },
+        "root": "062a95a9f2bdb37835dc660d652fdca0f616f0e9f35999acc907c47283b95995",
+        "slot": -1,
+        "status": "HELD"
+      }
+    },
+    "expire-me": {
+      "id": "7f6405b760e20e8f31b620ae940ca795ea7d94fccba9895efda07371a9a920f1",
+      "packet": {
+        "blocked": [],
+        "channel": "b673fb86576bd13fe4130de8d28b253576e92cd890bb04dcfe806d45bd7e896a",
+        "created_at": 1792504041,
+        "credit_state": {
+          "generations": [
+            0,
+            0
+          ],
+          "outstanding": {
+            "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35": 0,
+            "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": 0
+          },
+          "slots": [
+            "",
+            ""
+          ]
+        },
+        "generation": 1,
+        "matched": [
+          "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+        ],
+        "nonce": "expire-me",
+        "report": {
+          "binding": {
+            "channel": "b673fb86576bd13fe4130de8d28b253576e92cd890bb04dcfe806d45bd7e896a",
+            "config_root": "7884ace6c1c9f810ea7073f49a830ff0fce76034c1b7306b94a3dad7d719de62",
+            "credit_state_root": "328a22b7beb8fff2234528b67b8dbe16e86d053ba050525f7f65a491e97deb96",
+            "packet": "7f6405b760e20e8f31b620ae940ca795ea7d94fccba9895efda07371a9a920f1",
+            "policy": "semantic-fanout-buffer-v1",
+            "publisher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+            "source": {
+              "sha256": "a0f7c6430b4e6150767e6c3f4be878a9842af7754ef0b444943f4dd57edf77d3",
+              "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/maintenance.txt"
+            }
+          },
+          "labels": [
+            "YES",
+            "NO"
+          ],
+          "source": {
+            "body": "FICTIONAL DOCUMENT FOR A PUBLIC PROTOCOL DEMONSTRATION\nThe service will undergo planned maintenance on 2 November 2026, from 02:00 to 03:00 UTC. The service will be unavailable throughout this window.\nThere is no price increase. All subscription prices remain unchanged.\nThis authored notice is test data. It does not describe an actual service or actual delivery.\n",
+            "hash": "a0f7c6430b4e6150767e6c3f4be878a9842af7754ef0b444943f4dd57edf77d3",
+            "http": 200,
+            "status": "OK",
+            "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/maintenance.txt"
+          }
+        },
+        "root": "4239ea5234a5ae36899f51ed0faba8d7f2d25d539dc6fade7664dfc5e7d06b27",
+        "slot": 0,
+        "status": "PUBLISHED"
+      }
+    }
+  },
+  "checkpoints": {
+    "partial-ack": {
+      "room": {
+        "attempts": [
+          "24b8482a7aea4b1318a9631e4d4c305cb7467513c8ff2b126ace065be531b486"
+        ],
+        "config": {
+          "capacity": 2,
+          "contract": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+          "creator": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+          "credit": 1,
+          "enroll_deadline": 1792506619,
+          "members": [
+            "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+            "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35"
+          ],
+          "nonce": "main-v1",
+          "policy": "semantic-fanout-buffer-v1",
+          "ttl": 1800
+        },
+        "config_root": "47d74d8082af0078eee094579b882c489933f3157fb5ef80e4c88e17a507a023",
+        "filters": {
+          "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35": "The authored notice includes a definite increase of a subscription price, even if fictional.",
+          "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": "The authored notice includes a definite planned-maintenance service-unavailability statement, even if fictional."
+        },
+        "generations": [
+          1,
+          0
+        ],
+        "outstanding": {
+          "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35": 1,
+          "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": 0
+        },
+        "slots": [
+          "24b8482a7aea4b1318a9631e4d4c305cb7467513c8ff2b126ace065be531b486",
+          ""
+        ],
+        "status": "ACTIVE"
+      },
+      "delivery": {
+        "acked": [
+          "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+        ],
+        "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+        "deadline": 1792505195,
+        "expired": [],
+        "generation": 1,
+        "packet_root": "2356f1c2fc3a6258f68a6ac9a2c39999ae2a0872682bff16cc6b97a65b6ba748",
+        "pending": [
+          "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35"
+        ],
+        "slot": 0,
+        "status": "ACTIVE"
+      }
+    },
+    "drained": {
+      "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+      "room": {
+        "attempts": [
+          "24b8482a7aea4b1318a9631e4d4c305cb7467513c8ff2b126ace065be531b486",
+          "a8e00e6042fca31c0a5991d2ad72f0119e3aaa528d56175c6abeb67e2b49d40f",
+          "5fda35e62ea4ee8235d2b9046a3f693dd32cea2a0a1de77bc151539c032a4464"
+        ],
+        "config": {
+          "capacity": 2,
+          "contract": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+          "creator": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+          "credit": 1,
+          "enroll_deadline": 1792506619,
+          "members": [
+            "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+            "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35"
+          ],
+          "nonce": "main-v1",
+          "policy": "semantic-fanout-buffer-v1",
+          "ttl": 1800
+        },
+        "config_root": "47d74d8082af0078eee094579b882c489933f3157fb5ef80e4c88e17a507a023",
+        "filters": {
+          "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35": "The authored notice includes a definite increase of a subscription price, even if fictional.",
+          "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": "The authored notice includes a definite planned-maintenance service-unavailability statement, even if fictional."
+        },
+        "generations": [
+          1,
+          1
+        ],
+        "outstanding": {
+          "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35": 0,
+          "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": 0
+        },
+        "slots": [
+          "",
+          ""
+        ],
+        "status": "ACTIVE"
+      },
+      "packets": [
+        {
+          "id": "24b8482a7aea4b1318a9631e4d4c305cb7467513c8ff2b126ace065be531b486",
+          "packet": {
+            "blocked": [],
+            "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+            "created_at": 1792503395,
+            "credit_state": {
+              "generations": [
+                0,
+                0
+              ],
+              "outstanding": {
+                "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35": 0,
+                "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": 0
+              },
+              "slots": [
+                "",
+                ""
+              ]
+            },
+            "generation": 1,
+            "matched": [
+              "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+              "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35"
+            ],
+            "nonce": "shared-first",
+            "report": {
+              "binding": {
+                "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+                "config_root": "47d74d8082af0078eee094579b882c489933f3157fb5ef80e4c88e17a507a023",
+                "credit_state_root": "328a22b7beb8fff2234528b67b8dbe16e86d053ba050525f7f65a491e97deb96",
+                "packet": "24b8482a7aea4b1318a9631e4d4c305cb7467513c8ff2b126ace065be531b486",
+                "policy": "semantic-fanout-buffer-v1",
+                "publisher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+                "source": {
+                  "sha256": "e5e39a38eadedc835ee508a626309acae625f59c35b78620f78fe14a29d823c2",
+                  "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt"
+                }
+              },
+              "labels": [
+                "YES",
+                "YES"
+              ],
+              "source": {
+                "body": "FICTIONAL DOCUMENT FOR A PUBLIC PROTOCOL DEMONSTRATION\nThe service will undergo planned maintenance on 1 November 2026, from 02:00 to 03:00 UTC. The service will be unavailable throughout this window.\nThe monthly subscription price will increase from USD 10 to USD 12 on 1 December 2026.\nThis authored notice is test data. It does not describe an actual service or actual delivery.\n",
+                "hash": "e5e39a38eadedc835ee508a626309acae625f59c35b78620f78fe14a29d823c2",
+                "http": 200,
+                "status": "OK",
+                "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt"
+              }
+            },
+            "root": "2356f1c2fc3a6258f68a6ac9a2c39999ae2a0872682bff16cc6b97a65b6ba748",
+            "slot": 0,
+            "status": "PUBLISHED"
+          },
+          "delivery": {
+            "acked": [
+              "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+              "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35"
+            ],
+            "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+            "deadline": 1792505195,
+            "expired": [],
+            "generation": 1,
+            "packet_root": "2356f1c2fc3a6258f68a6ac9a2c39999ae2a0872682bff16cc6b97a65b6ba748",
+            "pending": [],
+            "slot": 0,
+            "status": "DRAINED"
+          }
+        },
+        {
+          "id": "a8e00e6042fca31c0a5991d2ad72f0119e3aaa528d56175c6abeb67e2b49d40f",
+          "packet": {
+            "blocked": [
+              "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35"
+            ],
+            "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+            "created_at": 1792503505,
+            "credit_state": {
+              "generations": [
+                1,
+                0
+              ],
+              "outstanding": {
+                "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35": 1,
+                "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": 0
+              },
+              "slots": [
+                "24b8482a7aea4b1318a9631e4d4c305cb7467513c8ff2b126ace065be531b486",
+                ""
+              ]
+            },
+            "generation": 0,
+            "matched": [
+              "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+              "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35"
+            ],
+            "nonce": "credit-blocked",
+            "report": {
+              "binding": {
+                "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+                "config_root": "47d74d8082af0078eee094579b882c489933f3157fb5ef80e4c88e17a507a023",
+                "credit_state_root": "48a6d94e302ffb0b17aa88bd5c1b6ce21378249fa251d20a91b98376776e28df",
+                "packet": "a8e00e6042fca31c0a5991d2ad72f0119e3aaa528d56175c6abeb67e2b49d40f",
+                "policy": "semantic-fanout-buffer-v1",
+                "publisher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+                "source": {
+                  "sha256": "e5e39a38eadedc835ee508a626309acae625f59c35b78620f78fe14a29d823c2",
+                  "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt"
+                }
+              },
+              "labels": [
+                "YES",
+                "YES"
+              ],
+              "source": {
+                "body": "FICTIONAL DOCUMENT FOR A PUBLIC PROTOCOL DEMONSTRATION\nThe service will undergo planned maintenance on 1 November 2026, from 02:00 to 03:00 UTC. The service will be unavailable throughout this window.\nThe monthly subscription price will increase from USD 10 to USD 12 on 1 December 2026.\nThis authored notice is test data. It does not describe an actual service or actual delivery.\n",
+                "hash": "e5e39a38eadedc835ee508a626309acae625f59c35b78620f78fe14a29d823c2",
+                "http": 200,
+                "status": "OK",
+                "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt"
+              }
+            },
+            "root": "3f86dbf18c42c23fe4eca5191ec2efa81ba029325121711781b741a57b7b514c",
+            "slot": -1,
+            "status": "BACKPRESSURED"
+          }
+        },
+        {
+          "id": "5fda35e62ea4ee8235d2b9046a3f693dd32cea2a0a1de77bc151539c032a4464",
+          "packet": {
+            "blocked": [],
+            "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+            "created_at": 1792503552,
+            "credit_state": {
+              "generations": [
+                1,
+                0
+              ],
+              "outstanding": {
+                "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35": 1,
+                "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": 0
+              },
+              "slots": [
+                "24b8482a7aea4b1318a9631e4d4c305cb7467513c8ff2b126ace065be531b486",
+                ""
+              ]
+            },
+            "generation": 1,
+            "matched": [
+              "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+            ],
+            "nonce": "ready-only",
+            "report": {
+              "binding": {
+                "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+                "config_root": "47d74d8082af0078eee094579b882c489933f3157fb5ef80e4c88e17a507a023",
+                "credit_state_root": "48a6d94e302ffb0b17aa88bd5c1b6ce21378249fa251d20a91b98376776e28df",
+                "packet": "5fda35e62ea4ee8235d2b9046a3f693dd32cea2a0a1de77bc151539c032a4464",
+                "policy": "semantic-fanout-buffer-v1",
+                "publisher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+                "source": {
+                  "sha256": "a0f7c6430b4e6150767e6c3f4be878a9842af7754ef0b444943f4dd57edf77d3",
+                  "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/maintenance.txt"
+                }
+              },
+              "labels": [
+                "YES",
+                "NO"
+              ],
+              "source": {
+                "body": "FICTIONAL DOCUMENT FOR A PUBLIC PROTOCOL DEMONSTRATION\nThe service will undergo planned maintenance on 2 November 2026, from 02:00 to 03:00 UTC. The service will be unavailable throughout this window.\nThere is no price increase. All subscription prices remain unchanged.\nThis authored notice is test data. It does not describe an actual service or actual delivery.\n",
+                "hash": "a0f7c6430b4e6150767e6c3f4be878a9842af7754ef0b444943f4dd57edf77d3",
+                "http": 200,
+                "status": "OK",
+                "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/maintenance.txt"
+              }
+            },
+            "root": "0ac35749a0640dd93fa45f9617948a56b742ac7d4816e6e33d96e52d4cd97385",
+            "slot": 1,
+            "status": "PUBLISHED"
+          },
+          "delivery": {
+            "acked": [
+              "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+            ],
+            "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+            "deadline": 1792505352,
+            "expired": [],
+            "generation": 1,
+            "packet_root": "0ac35749a0640dd93fa45f9617948a56b742ac7d4816e6e33d96e52d4cd97385",
+            "pending": [],
+            "slot": 1,
+            "status": "DRAINED"
+          }
+        }
+      ],
+      "verified": true
+    },
+    "expiry-published": {
+      "delivery": {
+        "acked": [],
+        "channel": "b673fb86576bd13fe4130de8d28b253576e92cd890bb04dcfe806d45bd7e896a",
+        "deadline": 1792504101,
+        "expired": [],
+        "generation": 1,
+        "packet_root": "4239ea5234a5ae36899f51ed0faba8d7f2d25d539dc6fade7664dfc5e7d06b27",
+        "pending": [
+          "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+        ],
+        "slot": 0,
+        "status": "ACTIVE"
+      }
+    }
+  },
+  "final_readback_verified": true,
+  "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+  "source": {
+    "address": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+    "source_match": true,
+    "sha256": "2cf5445c77ec5298c6adf6bffa2eab87938476ec19377a130ffe39958d6b6e73"
+  },
+  "final_states": {
+    "main": {
+      "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+      "room": {
+        "attempts": [
+          "24b8482a7aea4b1318a9631e4d4c305cb7467513c8ff2b126ace065be531b486",
+          "a8e00e6042fca31c0a5991d2ad72f0119e3aaa528d56175c6abeb67e2b49d40f",
+          "5fda35e62ea4ee8235d2b9046a3f693dd32cea2a0a1de77bc151539c032a4464",
+          "f8ee18da67b7c72a0706fca7559eab3f17592801c16c7d4459304a80d5f5f825",
+          "fa3ec6234bd5ba910cdb15e9b85bdd35995d752d6264a633411ab4c17e2e2918"
+        ],
+        "config": {
+          "capacity": 2,
+          "contract": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+          "creator": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+          "credit": 1,
+          "enroll_deadline": 1792506619,
+          "members": [
+            "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+            "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35"
+          ],
+          "nonce": "main-v1",
+          "policy": "semantic-fanout-buffer-v1",
+          "ttl": 1800
+        },
+        "config_root": "47d74d8082af0078eee094579b882c489933f3157fb5ef80e4c88e17a507a023",
+        "filters": {
+          "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35": "The authored notice includes a definite increase of a subscription price, even if fictional.",
+          "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": "The authored notice includes a definite planned-maintenance service-unavailability statement, even if fictional."
+        },
+        "generations": [
+          2,
+          1
+        ],
+        "outstanding": {
+          "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35": 1,
+          "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": 1
+        },
+        "slots": [
+          "f8ee18da67b7c72a0706fca7559eab3f17592801c16c7d4459304a80d5f5f825",
+          ""
+        ],
+        "status": "ACTIVE"
+      },
+      "packets": [
+        {
+          "id": "24b8482a7aea4b1318a9631e4d4c305cb7467513c8ff2b126ace065be531b486",
+          "packet": {
+            "blocked": [],
+            "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+            "created_at": 1792503395,
+            "credit_state": {
+              "generations": [
+                0,
+                0
+              ],
+              "outstanding": {
+                "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35": 0,
+                "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": 0
+              },
+              "slots": [
+                "",
+                ""
+              ]
+            },
+            "generation": 1,
+            "matched": [
+              "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+              "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35"
+            ],
+            "nonce": "shared-first",
+            "report": {
+              "binding": {
+                "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+                "config_root": "47d74d8082af0078eee094579b882c489933f3157fb5ef80e4c88e17a507a023",
+                "credit_state_root": "328a22b7beb8fff2234528b67b8dbe16e86d053ba050525f7f65a491e97deb96",
+                "packet": "24b8482a7aea4b1318a9631e4d4c305cb7467513c8ff2b126ace065be531b486",
+                "policy": "semantic-fanout-buffer-v1",
+                "publisher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+                "source": {
+                  "sha256": "e5e39a38eadedc835ee508a626309acae625f59c35b78620f78fe14a29d823c2",
+                  "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt"
+                }
+              },
+              "labels": [
+                "YES",
+                "YES"
+              ],
+              "source": {
+                "body": "FICTIONAL DOCUMENT FOR A PUBLIC PROTOCOL DEMONSTRATION\nThe service will undergo planned maintenance on 1 November 2026, from 02:00 to 03:00 UTC. The service will be unavailable throughout this window.\nThe monthly subscription price will increase from USD 10 to USD 12 on 1 December 2026.\nThis authored notice is test data. It does not describe an actual service or actual delivery.\n",
+                "hash": "e5e39a38eadedc835ee508a626309acae625f59c35b78620f78fe14a29d823c2",
+                "http": 200,
+                "status": "OK",
+                "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt"
+              }
+            },
+            "root": "2356f1c2fc3a6258f68a6ac9a2c39999ae2a0872682bff16cc6b97a65b6ba748",
+            "slot": 0,
+            "status": "PUBLISHED"
+          },
+          "delivery": {
+            "acked": [
+              "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+              "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35"
+            ],
+            "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+            "deadline": 1792505195,
+            "expired": [],
+            "generation": 1,
+            "packet_root": "2356f1c2fc3a6258f68a6ac9a2c39999ae2a0872682bff16cc6b97a65b6ba748",
+            "pending": [],
+            "slot": 0,
+            "status": "DRAINED"
+          }
+        },
+        {
+          "id": "a8e00e6042fca31c0a5991d2ad72f0119e3aaa528d56175c6abeb67e2b49d40f",
+          "packet": {
+            "blocked": [
+              "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35"
+            ],
+            "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+            "created_at": 1792503505,
+            "credit_state": {
+              "generations": [
+                1,
+                0
+              ],
+              "outstanding": {
+                "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35": 1,
+                "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": 0
+              },
+              "slots": [
+                "24b8482a7aea4b1318a9631e4d4c305cb7467513c8ff2b126ace065be531b486",
+                ""
+              ]
+            },
+            "generation": 0,
+            "matched": [
+              "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+              "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35"
+            ],
+            "nonce": "credit-blocked",
+            "report": {
+              "binding": {
+                "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+                "config_root": "47d74d8082af0078eee094579b882c489933f3157fb5ef80e4c88e17a507a023",
+                "credit_state_root": "48a6d94e302ffb0b17aa88bd5c1b6ce21378249fa251d20a91b98376776e28df",
+                "packet": "a8e00e6042fca31c0a5991d2ad72f0119e3aaa528d56175c6abeb67e2b49d40f",
+                "policy": "semantic-fanout-buffer-v1",
+                "publisher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+                "source": {
+                  "sha256": "e5e39a38eadedc835ee508a626309acae625f59c35b78620f78fe14a29d823c2",
+                  "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt"
+                }
+              },
+              "labels": [
+                "YES",
+                "YES"
+              ],
+              "source": {
+                "body": "FICTIONAL DOCUMENT FOR A PUBLIC PROTOCOL DEMONSTRATION\nThe service will undergo planned maintenance on 1 November 2026, from 02:00 to 03:00 UTC. The service will be unavailable throughout this window.\nThe monthly subscription price will increase from USD 10 to USD 12 on 1 December 2026.\nThis authored notice is test data. It does not describe an actual service or actual delivery.\n",
+                "hash": "e5e39a38eadedc835ee508a626309acae625f59c35b78620f78fe14a29d823c2",
+                "http": 200,
+                "status": "OK",
+                "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt"
+              }
+            },
+            "root": "3f86dbf18c42c23fe4eca5191ec2efa81ba029325121711781b741a57b7b514c",
+            "slot": -1,
+            "status": "BACKPRESSURED"
+          }
+        },
+        {
+          "id": "5fda35e62ea4ee8235d2b9046a3f693dd32cea2a0a1de77bc151539c032a4464",
+          "packet": {
+            "blocked": [],
+            "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+            "created_at": 1792503552,
+            "credit_state": {
+              "generations": [
+                1,
+                0
+              ],
+              "outstanding": {
+                "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35": 1,
+                "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": 0
+              },
+              "slots": [
+                "24b8482a7aea4b1318a9631e4d4c305cb7467513c8ff2b126ace065be531b486",
+                ""
+              ]
+            },
+            "generation": 1,
+            "matched": [
+              "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+            ],
+            "nonce": "ready-only",
+            "report": {
+              "binding": {
+                "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+                "config_root": "47d74d8082af0078eee094579b882c489933f3157fb5ef80e4c88e17a507a023",
+                "credit_state_root": "48a6d94e302ffb0b17aa88bd5c1b6ce21378249fa251d20a91b98376776e28df",
+                "packet": "5fda35e62ea4ee8235d2b9046a3f693dd32cea2a0a1de77bc151539c032a4464",
+                "policy": "semantic-fanout-buffer-v1",
+                "publisher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+                "source": {
+                  "sha256": "a0f7c6430b4e6150767e6c3f4be878a9842af7754ef0b444943f4dd57edf77d3",
+                  "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/maintenance.txt"
+                }
+              },
+              "labels": [
+                "YES",
+                "NO"
+              ],
+              "source": {
+                "body": "FICTIONAL DOCUMENT FOR A PUBLIC PROTOCOL DEMONSTRATION\nThe service will undergo planned maintenance on 2 November 2026, from 02:00 to 03:00 UTC. The service will be unavailable throughout this window.\nThere is no price increase. All subscription prices remain unchanged.\nThis authored notice is test data. It does not describe an actual service or actual delivery.\n",
+                "hash": "a0f7c6430b4e6150767e6c3f4be878a9842af7754ef0b444943f4dd57edf77d3",
+                "http": 200,
+                "status": "OK",
+                "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/maintenance.txt"
+              }
+            },
+            "root": "0ac35749a0640dd93fa45f9617948a56b742ac7d4816e6e33d96e52d4cd97385",
+            "slot": 1,
+            "status": "PUBLISHED"
+          },
+          "delivery": {
+            "acked": [
+              "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+            ],
+            "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+            "deadline": 1792505352,
+            "expired": [],
+            "generation": 1,
+            "packet_root": "0ac35749a0640dd93fa45f9617948a56b742ac7d4816e6e33d96e52d4cd97385",
+            "pending": [],
+            "slot": 1,
+            "status": "DRAINED"
+          }
+        },
+        {
+          "id": "f8ee18da67b7c72a0706fca7559eab3f17592801c16c7d4459304a80d5f5f825",
+          "packet": {
+            "blocked": [],
+            "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+            "created_at": 1792503702,
+            "credit_state": {
+              "generations": [
+                1,
+                1
+              ],
+              "outstanding": {
+                "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35": 0,
+                "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": 0
+              },
+              "slots": [
+                "",
+                ""
+              ]
+            },
+            "generation": 2,
+            "matched": [
+              "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+              "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35"
+            ],
+            "nonce": "slot-reuse",
+            "report": {
+              "binding": {
+                "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+                "config_root": "47d74d8082af0078eee094579b882c489933f3157fb5ef80e4c88e17a507a023",
+                "credit_state_root": "77afb9bfb4161f10093b4865058b9254912635fb245cd764f9593810d0aae3af",
+                "packet": "f8ee18da67b7c72a0706fca7559eab3f17592801c16c7d4459304a80d5f5f825",
+                "policy": "semantic-fanout-buffer-v1",
+                "publisher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+                "source": {
+                  "sha256": "e5e39a38eadedc835ee508a626309acae625f59c35b78620f78fe14a29d823c2",
+                  "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt"
+                }
+              },
+              "labels": [
+                "YES",
+                "YES"
+              ],
+              "source": {
+                "body": "FICTIONAL DOCUMENT FOR A PUBLIC PROTOCOL DEMONSTRATION\nThe service will undergo planned maintenance on 1 November 2026, from 02:00 to 03:00 UTC. The service will be unavailable throughout this window.\nThe monthly subscription price will increase from USD 10 to USD 12 on 1 December 2026.\nThis authored notice is test data. It does not describe an actual service or actual delivery.\n",
+                "hash": "e5e39a38eadedc835ee508a626309acae625f59c35b78620f78fe14a29d823c2",
+                "http": 200,
+                "status": "OK",
+                "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt"
+              }
+            },
+            "root": "9369f833e19119755c3b251eba5aa87a4f4226b83fc68235730bc4c5955dfacc",
+            "slot": 0,
+            "status": "PUBLISHED"
+          },
+          "delivery": {
+            "acked": [],
+            "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+            "deadline": 1792505502,
+            "expired": [],
+            "generation": 2,
+            "packet_root": "9369f833e19119755c3b251eba5aa87a4f4226b83fc68235730bc4c5955dfacc",
+            "pending": [
+              "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+              "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35"
+            ],
+            "slot": 0,
+            "status": "ACTIVE"
+          }
+        },
+        {
+          "id": "fa3ec6234bd5ba910cdb15e9b85bdd35995d752d6264a633411ab4c17e2e2918",
+          "packet": {
+            "blocked": [],
+            "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+            "created_at": 1792503977,
+            "credit_state": {
+              "generations": [
+                2,
+                1
+              ],
+              "outstanding": {
+                "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35": 1,
+                "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": 1
+              },
+              "slots": [
+                "f8ee18da67b7c72a0706fca7559eab3f17592801c16c7d4459304a80d5f5f825",
+                ""
+              ]
+            },
+            "generation": 0,
+            "matched": [],
+            "nonce": "bad-source",
+            "report": {
+              "binding": {
+                "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+                "config_root": "47d74d8082af0078eee094579b882c489933f3157fb5ef80e4c88e17a507a023",
+                "credit_state_root": "fab6bac718da00b81f30851019db9f95ea6322e536bab6a1fffead74091a13ae",
+                "packet": "fa3ec6234bd5ba910cdb15e9b85bdd35995d752d6264a633411ab4c17e2e2918",
+                "policy": "semantic-fanout-buffer-v1",
+                "publisher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+                "source": {
+                  "sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+                  "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt"
+                }
+              },
+              "labels": [],
+              "source": {
+                "body": "FICTIONAL DOCUMENT FOR A PUBLIC PROTOCOL DEMONSTRATION\nThe service will undergo planned maintenance on 1 November 2026, from 02:00 to 03:00 UTC. The service will be unavailable throughout this window.\nThe monthly subscription price will increase from USD 10 to USD 12 on 1 December 2026.\nThis authored notice is test data. It does not describe an actual service or actual delivery.\n",
+                "hash": "e5e39a38eadedc835ee508a626309acae625f59c35b78620f78fe14a29d823c2",
+                "http": 200,
+                "status": "HASH_MISMATCH",
+                "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/shared.txt"
+              }
+            },
+            "root": "062a95a9f2bdb37835dc660d652fdca0f616f0e9f35999acc907c47283b95995",
+            "slot": -1,
+            "status": "HELD"
+          }
+        }
+      ],
+      "verified": true
+    },
+    "expiry": {
+      "channel": "b673fb86576bd13fe4130de8d28b253576e92cd890bb04dcfe806d45bd7e896a",
+      "room": {
+        "attempts": [
+          "7f6405b760e20e8f31b620ae940ca795ea7d94fccba9895efda07371a9a920f1"
+        ],
+        "config": {
+          "capacity": 2,
+          "contract": "0xf2601f20566e0e8Fd26f2f4Bdd0a2F18d94d23E9",
+          "creator": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+          "credit": 1,
+          "enroll_deadline": 1792506808,
+          "members": [
+            "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+            "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35"
+          ],
+          "nonce": "expiry-v1",
+          "policy": "semantic-fanout-buffer-v1",
+          "ttl": 60
+        },
+        "config_root": "7884ace6c1c9f810ea7073f49a830ff0fce76034c1b7306b94a3dad7d719de62",
+        "filters": {
+          "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35": "The authored notice includes a definite increase of a subscription price, even if fictional.",
+          "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": "The authored notice includes a definite planned-maintenance service-unavailability statement, even if fictional."
+        },
+        "generations": [
+          1,
+          0
+        ],
+        "outstanding": {
+          "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35": 0,
+          "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": 0
+        },
+        "slots": [
+          "",
+          ""
+        ],
+        "status": "ACTIVE"
+      },
+      "packets": [
+        {
+          "id": "7f6405b760e20e8f31b620ae940ca795ea7d94fccba9895efda07371a9a920f1",
+          "packet": {
+            "blocked": [],
+            "channel": "b673fb86576bd13fe4130de8d28b253576e92cd890bb04dcfe806d45bd7e896a",
+            "created_at": 1792504041,
+            "credit_state": {
+              "generations": [
+                0,
+                0
+              ],
+              "outstanding": {
+                "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35": 0,
+                "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42": 0
+              },
+              "slots": [
+                "",
+                ""
+              ]
+            },
+            "generation": 1,
+            "matched": [
+              "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+            ],
+            "nonce": "expire-me",
+            "report": {
+              "binding": {
+                "channel": "b673fb86576bd13fe4130de8d28b253576e92cd890bb04dcfe806d45bd7e896a",
+                "config_root": "7884ace6c1c9f810ea7073f49a830ff0fce76034c1b7306b94a3dad7d719de62",
+                "credit_state_root": "328a22b7beb8fff2234528b67b8dbe16e86d053ba050525f7f65a491e97deb96",
+                "packet": "7f6405b760e20e8f31b620ae940ca795ea7d94fccba9895efda07371a9a920f1",
+                "policy": "semantic-fanout-buffer-v1",
+                "publisher": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+                "source": {
+                  "sha256": "a0f7c6430b4e6150767e6c3f4be878a9842af7754ef0b444943f4dd57edf77d3",
+                  "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/maintenance.txt"
+                }
+              },
+              "labels": [
+                "YES",
+                "NO"
+              ],
+              "source": {
+                "body": "FICTIONAL DOCUMENT FOR A PUBLIC PROTOCOL DEMONSTRATION\nThe service will undergo planned maintenance on 2 November 2026, from 02:00 to 03:00 UTC. The service will be unavailable throughout this window.\nThere is no price increase. All subscription prices remain unchanged.\nThis authored notice is test data. It does not describe an actual service or actual delivery.\n",
+                "hash": "a0f7c6430b4e6150767e6c3f4be878a9842af7754ef0b444943f4dd57edf77d3",
+                "http": 200,
+                "status": "OK",
+                "url": "https://raw.githubusercontent.com/Starling-spell/semantic-fanout-buffer/94c28c47c03e48ff14526adc0ff368039e0a7d21/examples/maintenance.txt"
+              }
+            },
+            "root": "4239ea5234a5ae36899f51ed0faba8d7f2d25d539dc6fade7664dfc5e7d06b27",
+            "slot": 0,
+            "status": "PUBLISHED"
+          },
+          "delivery": {
+            "acked": [],
+            "channel": "b673fb86576bd13fe4130de8d28b253576e92cd890bb04dcfe806d45bd7e896a",
+            "deadline": 1792504101,
+            "expired": [
+              "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42"
+            ],
+            "generation": 1,
+            "packet_root": "4239ea5234a5ae36899f51ed0faba8d7f2d25d539dc6fade7664dfc5e7d06b27",
+            "pending": [],
+            "slot": 0,
+            "status": "EXPIRED"
+          }
+        }
+      ],
+      "verified": true
+    }
+  },
+  "transitions": [
+    {
+      "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "at": 1792503451,
+      "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+      "kind": "ACK",
+      "packet": "24b8482a7aea4b1318a9631e4d4c305cb7467513c8ff2b126ace065be531b486"
+    },
+    {
+      "actor": "0x7a413BB4AB62E31d62d4cD9efC8C8a8Dae37FB42",
+      "at": 1792503608,
+      "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+      "kind": "ACK",
+      "packet": "5fda35e62ea4ee8235d2b9046a3f693dd32cea2a0a1de77bc151539c032a4464"
+    },
+    {
+      "actor": "0x34346773a22564cbcc5F1D67D1c1F9f196DaEA35",
+      "at": 1792503651,
+      "channel": "8ced9e6bf1f39942325d03d44ddd743ce8610b036d629aab4d298109283071b1",
+      "kind": "ACK",
+      "packet": "24b8482a7aea4b1318a9631e4d4c305cb7467513c8ff2b126ace065be531b486"
+    },
+    {
+      "at": 1792504108,
+      "channel": "b673fb86576bd13fe4130de8d28b253576e92cd890bb04dcfe806d45bd7e896a",
+      "kind": "EXPIRE",
+      "packet": "7f6405b760e20e8f31b620ae940ca795ea7d94fccba9895efda07371a9a920f1"
+    }
+  ]
+}
